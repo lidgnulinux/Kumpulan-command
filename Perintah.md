@@ -21,4 +21,8 @@ Opsi 2 (debian unstable).
 $ amixer get Master | grep -E '[0-9]{1,3}%' | awk {'print $5'} | tr -d [] | tail -n1
 ```
 
-## 
+## Mengetahui jumlah paket yang terinstall (debian dan turunannya).
+
+```
+$ dpkg -l | wc -l
+```
