@@ -26,3 +26,8 @@ $ amixer get Master | grep -E '[0-9]{1,3}%' | awk {'print $5'} | tr -d [] | tail
 ```
 $ dpkg -l | wc -l
 ```
+
+## Mengeksekusi file ".desktop" melalui terminal.
+```
+$ $(awk '/^Exec=/{sub(/^Exec=/, ""); print}' /path/to/file.desktop)
+```
